@@ -5,7 +5,6 @@ import { useContext } from 'react';
 import CryptoContext from '../Contects/crypto-context.jsx';
 
 const siderStyle = {
-  marginBottom: '1rem',
   padding: '1rem'
   };
 
