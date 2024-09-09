@@ -1,20 +1,16 @@
-import { Layout, Card, Statistic, List, Typography, Spin, Tag  } from 'antd';
+import { Layout, Card, Statistic, List, Typography, Tag  } from 'antd';
 import { ArrowDownOutlined, ArrowUpOutlined } from '@ant-design/icons';
 import { capitalize } from '../../utils';
 import { useContext } from 'react';
 import CryptoContext from '../Contects/crypto-context.jsx';
 
 const siderStyle = {
-  marginBottom: '1 rem',
-  padding: '1 rem'
+  marginBottom: '1rem',
+  padding: '1rem'
   };
 
 const Sider = () => {
-  const {loading, assets} = useContext(CryptoContext)
-
-  if (loading) {
-    return <Spin fullscreen />
-  }
+  const { assets} = useContext(CryptoContext)
 
   return (
     <Layout.Sider width="25%" style={siderStyle}>
