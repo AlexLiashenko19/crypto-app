@@ -19,7 +19,7 @@ function Header () {
     const [select, setSelect] = useState(false)
     const [coin, setCoin] = useState(null);
     const [modal, setModal] = useState(false)
-    const [drawer, setDrawer] = useState(false)
+    const [drawer, setDrawer] = useState(true)
 
 
     const { crypto } = useCryptoContext()
@@ -61,7 +61,7 @@ function Header () {
                 )}
             />
 
-            <Button type="primary" onClick={() => setDrawer(true)}>Primary Button</Button>
+            <Button type="primary" onClick={() => setDrawer(true)} style={{marginLeft: 'auto'}}>Primary Button</Button>
 
             <Modal 
             open={modal} 
@@ -69,8 +69,14 @@ function Header () {
             footer={null}>
                 <CoinInfoModal coin={coin}/>
             </Modal>
-            <Drawer width={600} title="Add Asset" onClose={() => setDrawer(false)} open={drawer}>
-                <AddAssetForm/>
+            <Drawer 
+            width={600} 
+            title="Add Asset" 
+            onClose={() => setDrawer(false)} 
+            open={drawer} 
+            destroyOnClose
+            >
+                <AddAssetForm onClose={() => setDrawer(false)} />
             </Drawer>
         </Layout.Header>
     )
