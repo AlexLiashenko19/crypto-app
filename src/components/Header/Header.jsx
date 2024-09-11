@@ -61,7 +61,7 @@ function Header () {
                 )}
             />
 
-            <Button type="primary" onClick={() => setDrawer(true)} style={{marginLeft: 'auto'}}>Primary Button</Button>
+            <Button type="primary" onClick={() => setDrawer(true)} style={{marginLeft: 'auto'}}>Add Coin</Button>
 
             <Modal 
             open={modal} 
@@ -70,14 +70,16 @@ function Header () {
                 <CoinInfoModal coin={coin}/>
             </Modal>
             <Drawer 
-            width={600} 
-            title="Add Asset" 
-            onClose={() => setDrawer(false)} 
-            open={drawer} 
-            destroyOnClose
-            >
-            <AddAssetForm onClose={() => setDrawer(false)} />
-            </Drawer>
+  width={600} 
+  title="Add Asset" 
+  onClose={() => {
+    setDrawer(false);
+  }} 
+  open={drawer} 
+  destroyOnClose
+>
+  <AddAssetForm />
+</Drawer>
         </Layout.Header>
     )
 }

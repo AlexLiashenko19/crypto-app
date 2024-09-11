@@ -9,7 +9,7 @@ const siderStyle = {
   textAlign: 'center',
   lineHeight: '120px',
   color: '#fff',
-  backgroundColor: '#1677ff',
+  backgroundColor: '#001529',
   };
 
 const Sider = () => {
@@ -32,7 +32,6 @@ const Sider = () => {
           dataSource={[
             {title: 'Total Profite', value: asset.totalProfit, withTag: true},
             {title: 'Total Amount', value: asset.amount, isPlain: true},
-            // {title: 'Total Difference', value: asset.growPercent},
           ]}
           renderItem={(item) => (
             <List.Item style={{display: 'flex', justifyContent: 'space-between'}}>
