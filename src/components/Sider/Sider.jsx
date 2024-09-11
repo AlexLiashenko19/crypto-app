@@ -5,7 +5,11 @@ import { useContext } from 'react';
 import CryptoContext from '../Contects/crypto-context.jsx';
 
 const siderStyle = {
-  padding: '1rem'
+  padding: '1rem',
+  textAlign: 'center',
+  lineHeight: '120px',
+  color: '#fff',
+  backgroundColor: '#1677ff',
   };
 
 const Sider = () => {
